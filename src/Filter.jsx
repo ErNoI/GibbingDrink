@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Button from "./Button";
+import Button from "./Buttons/Button";
 
 function Filter({ onChange }) {
   const [activeFilter, setActiveFilter] = useState("All");

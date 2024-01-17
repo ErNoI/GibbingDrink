@@ -32,7 +32,7 @@ export default function Waves() {
             y="5"
             fill="rgba(244, 240, 236, 0.3)"
           />
-          <use xlinkHref="#gentle-wave" x="48" y="7" fill="#e4e0dc" />
+          <use xlinkHref="#gentle-wave" x="48" y="7" fill="#e0dcd8" />
         </g>
       </svg>
     </div>

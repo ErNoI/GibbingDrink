@@ -19,4 +19,8 @@ export function getEnergyDrinkById(id) {
 
 export function getNumberOfDrinks(){
     return EnergyDrinks.length;
-}   
+}
+
+export function getEnergyDrinkByIdWithBlacklist(blacklist) {
+    return EnergyDrinks.find((drink) => drink.id === id && !blacklist.includes(drink.id));
+}

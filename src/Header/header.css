@@ -1,5 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
+
 .flex {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -8,39 +18,46 @@
 .header {
   position: relative;
   text-align: center;
-  color: #2b2b2b;
-  background: linear-gradient(
-    60deg,
-    rgba(49, 46, 43, 1) 10%,
-    rgba(92, 89, 86, 1) 90%
-  );
+  color: #fff;
+  background: url("../assets/Background2.jpg") center/cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .inner-header {
+  max-width: 1200px;
   height: 70vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
 }
 
-.inner-header .redbull {
-  width: 200px;
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  transform: rotate(25deg);
+h1 {
+  font-size: 7em;
+  margin: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  color: #f4f0ec;
+}
+
+h2 {
+  font-size: 3em;
+  margin: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  color: #e7524c;
 }
 
 .imageContainer {
   background-color: #2b2b2b;
-}
-
-.inner-header .monster {
-  width: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: rotate(-25deg);
 }
 
 .waves {
@@ -51,8 +68,6 @@
   min-height: 100px;
   max-height: 150px;
 }
-
-/* Animation */
 
 .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
@@ -81,7 +96,7 @@
     transform: translate3d(85px, 0, 0);
   }
 }
-/*Shrinking for mobile*/
+
 @media (max-width: 768px) {
   .waves {
     height: 40px;

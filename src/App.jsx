@@ -2,7 +2,6 @@ import "./App.css";
 import Header from "./Header/Header";
 import List from "./List";
 import Filter from "./Filter";
-import Quiz from "./Quiz/Quiz";
 import { useState } from "react";
 
 function App() {

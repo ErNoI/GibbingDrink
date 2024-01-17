@@ -1,4 +1,5 @@
 import React from "react";
+import "./buttons.css";
 
 function Button(props) {
   const handleClick = () => {
@@ -7,7 +8,7 @@ function Button(props) {
 
   return (
     <button
-      className={`button ${props.active ? "active" : ""}`}
+      className={`button scroll ${props.active ? "active" : ""}`}
       onClick={handleClick}
     >
       {props.text}
