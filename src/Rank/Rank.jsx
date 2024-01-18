@@ -9,56 +9,61 @@ import purpleBadge from "../assets/Ranks/PurpleBadge.png";
 import useScroll from "../Hooks/useScroll";
 
 const RANKTITLE = {
-  100: "NEWB",
-  200: "GOLD",
-  300: "DIAMOND",
-  400: "MASTER",
-  600: "GRANDMASTER",
-  800: "GRANDMASTER",
+  0: "NEWB",
+  100: "GOLD",
+  200: "DIAMOND",
+  300: "MASTER",
+  500: "GRAND MASTER",
+  700: "GIBBING MASTER",
 };
 
 const RANKBADGE = {
-  100: greenBadge,
-  200: goldBadge,
-  300: blueBadge,
-  400: purpleBadge,
-  600: redBadge,
-  800: rainbowBadge,
+  0: greenBadge,
+  100: goldBadge,
+  200: blueBadge,
+  300: purpleBadge,
+  500: redBadge,
+  700: rainbowBadge,
 };
 
 function getRankTitle(rank) {
-  if (rank < 100) {
-    return "NEWB";
-  } else if (rank < 200) {
-    return "GOLD";
-  } else if (rank < 300) {
-    return "DIAMOND";
-  } else if (rank < 400) {
-    return "MASTER";
-  } else if (rank < 600) {
-    return "GRANDMASTER";
-  } else if (rank < 800) {
-    return "GRANDMASTER";
-  } else {
-    return "NEWB";
+  console.log(rank);
+  if (rank < 1) {
+    return RANKTITLE[0];
+  }
+  for (const key of Object.keys(RANKTITLE).reverse()) {
+    if (rank >= key) {
+      return RANKTITLE[key];
+    }
   }
 }
 
 function getRankBadge(rank) {
-  if (rank < 100) {
-    return greenBadge;
-  } else if (rank < 200) {
-    return goldBadge;
-  } else if (rank < 300) {
-    return blueBadge;
-  } else if (rank < 400) {
-    return purpleBadge;
-  } else if (rank < 600) {
-    return redBadge;
-  } else if (rank < 800) {
-    return rainbowBadge;
-  } else {
-    return greenBadge;
+  if (rank < 1) {
+    return RANKBADGE[0];
+  }
+  for (const key of Object.keys(RANKBADGE).reverse()) {
+    if (rank >= key) {
+      return RANKBADGE[key];
+    }
+  }
+  return RANKBADGE[100];
+}
+
+function getCurrentRankScoreNeeded(rank) {
+  for (const key of Object.keys(RANKTITLE).reverse()) {
+    if (rank >= key) {
+      return key;
+    }
+  }
+  return 0;
+}
+
+function getNextRankScoreNeeded(rank) {
+  for (const key of Object.keys(RANKTITLE)) {
+    if (rank < key) {
+      return key;
+    }
   }
 }
 
@@ -82,12 +87,23 @@ function Rank() {
     };
   }, [rank]);
 
+  const currentRankScore = getCurrentRankScoreNeeded(rank);
+  const NextRankScore = getNextRankScoreNeeded(rank);
+
+  const progressPercentage = Math.round(
+    ((rank - currentRankScore) / (NextRankScore - currentRankScore)) * 100
+  );
+
   return (
     <div className={`rank-container  ${isVisible ? "visible" : ""}`}>
       <div className="rank-box ">
         <h3>{getRankTitle(rank)}</h3>
         <img src={getRankBadge(rank)} alt={`Rank ${rank}`} />
       </div>
+      <div
+        className="progress-bar"
+        style={{ width: `${progressPercentage}%` }}
+      />
     </div>
   );
 }

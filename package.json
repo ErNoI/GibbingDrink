@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
+    "host": "vite --host",
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d dist",
     "dev": "vite",
