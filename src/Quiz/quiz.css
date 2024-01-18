@@ -54,6 +54,23 @@
 
 @media screen and (max-width: 768px) {
   .modal-content {
-    width: 100%;
+    width: 80%;
+  }
+  .flexColumn .card {
+    width: 120px;
+    min-width: 100px;
+  }
+
+  .flexColumn .card .title {
+    font-size: 1.2em;
+  }
+
+  .flexColumn .card img {
+    height: 120px;
+    width: auto;
+  }
+
+  .flexColumn h2 {
+    font-size: 1.5em;
   }
 }
