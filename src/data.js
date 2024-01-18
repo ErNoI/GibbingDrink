@@ -2,7 +2,7 @@ export const EnergyDrinks = [
     {
         "id": 1,
         "name": "Original",
-        "image": "./src/assets/Monster-original.png",
+        "image": "./assets/Monster-original.png",
         "type": "Monster",
         "gibbin": true,
         "sugar": true
@@ -10,7 +10,7 @@ export const EnergyDrinks = [
     {
         "id": 2,
         "name": "Original",
-        "image": "./src/assets/Redbull-original.png",
+        "image": "./assets/Redbull-original.png",
         "type": "Redbull",
         "gibbin": false,
         "sugar": true
@@ -18,7 +18,7 @@ export const EnergyDrinks = [
     {
         "id": 3,
         "name": "Apple",
-        "image": "./src/assets/Reign/Reign-apple.png",
+        "image": "./assets/Reign/Reign-apple.png",
         "type": "Reign",
         "gibbin": true,
         "sugar": true
@@ -26,7 +26,7 @@ export const EnergyDrinks = [
     {
         "id": 4,
         "name": "Original",
-        "image": "./src/assets/Rockstar-original.png",
+        "image": "./assets/Rockstar-original.png",
         "type": "Rockstar",
         "gibbin": true,
         "sugar": true
@@ -34,7 +34,7 @@ export const EnergyDrinks = [
     {
         "id": 5,
         "name": "Original",
-        "image": "./src/assets/powerking-original.png",
+        "image": "./assets/powerking-original.png",
         "type": "Power King",
         "gibbin": false,
         "sugar": true
@@ -42,7 +42,7 @@ export const EnergyDrinks = [
     {
         "id": 6,
         "name": "Original",
-        "image": "./src/assets/Burn-original.png",
+        "image": "./assets/Burn-original.png",
         "type": "Burn",
         "gibbin": false,
         "sugar": true
@@ -50,7 +50,7 @@ export const EnergyDrinks = [
     {
         "id": 7,
         "name": "Orange",
-        "image": "./src/assets/Celcius/Celsius-Orange.png",
+        "image": "./assets/Celcius/Celsius-Orange.png",
         "type": "Celcius ",
         "gibbin": false,
         "sugar": true
@@ -58,7 +58,7 @@ export const EnergyDrinks = [
     {
         "id": 8,
         "name": "Original",
-        "image": "./src/assets/Cult-original.png",
+        "image": "./assets/Cult-original.png",
         "type": "Cult",
         "gibbin": true,
         "sugar": true
@@ -66,7 +66,7 @@ export const EnergyDrinks = [
     {
         "id": 9,
         "name": "Original",
-        "image": "./src/assets/RoyalCrown-original.png",
+        "image": "./assets/RoyalCrown-original.png",
         "type": "Royal Crown",
         "gibbin": false,
         "sugar": true
@@ -74,7 +74,7 @@ export const EnergyDrinks = [
     {
         "id": 10,
         "name": "Cherry Vanilla",
-        "image": "./src/assets/Bang/Bang-BlackCherryVanilla.png",
+        "image": "./assets/Bang/Bang-BlackCherryVanilla.png",
         "type": "Bang",
         "gibbin": true,
         "sugar": true
@@ -82,7 +82,7 @@ export const EnergyDrinks = [
     {
         "id": 11,
         "name": "Strawberry",
-        "image": "./src/assets/Nocco/Nocco-strawberry.png",
+        "image": "./assets/Nocco/Nocco-strawberry.png",
         "type": "Nocco ",
         "gibbin": false,
         "sugar": true
@@ -90,7 +90,7 @@ export const EnergyDrinks = [
     {
         "id": 12,
         "name": "Original",
-        "image": "./src/assets/wolverine-original.png",
+        "image": "./assets/wolverine-original.png",
         "type": "Wolverine",
         "gibbin": true,
         "sugar": true
@@ -98,7 +98,7 @@ export const EnergyDrinks = [
     {
         "id": 13,
         "name": "Unicorn dreams",
-        "image": "./src/assets/lohilo-unicorn.png",
+        "image": "./assets/lohilo-unicorn.png",
         "type": "Lohilo",
         "gibbin": false,
         "sugar": true
@@ -106,7 +106,7 @@ export const EnergyDrinks = [
     {
         "id": 14,
         "name": "Original",
-        "image": "./src/assets/franks-original.png",
+        "image": "./assets/franks-original.png",
         "type": "Franks",
         "gibbin": true,
         "sugar": true
@@ -114,7 +114,7 @@ export const EnergyDrinks = [
     {
         "id": 15,
         "name": "Raspberry",
-        "image": "./src/assets/clean-hallon.png",
+        "image": "./assets/clean-hallon.png",
         "type": "Clean",
         "gibbin": false,
         "sugar": true
@@ -122,7 +122,7 @@ export const EnergyDrinks = [
     {
         "id": 16,
         "name": "Lemon-lime",
-        "image": "./src/assets/pxl-Lime.png",
+        "image": "./assets/pxl-Lime.png",
         "type": "Pxl",
         "gibbin": true,
         "sugar": true
