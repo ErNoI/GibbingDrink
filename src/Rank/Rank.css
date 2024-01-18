@@ -1,0 +1,38 @@
+.rank-container {
+  position: fixed;
+  top: 80px;
+  right: -100px;
+  height: 100px;
+  width: 100px;
+  transition: all 0.3s ease-in-out;
+}
+
+.rank-container.visible {
+  top: 80px;
+  right: 20px;
+}
+
+.rank-box {
+  background-color: #f4f0ec;
+  border-radius: 5%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rank-box h3 {
+  margin: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #2b2b2b;
+}
+
+.rank-box img {
+  height: 60px;
+  width: auto;
+}

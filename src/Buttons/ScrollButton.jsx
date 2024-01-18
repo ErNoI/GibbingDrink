@@ -1,23 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./buttons.css";
+import useScroll from "../hooks/useScroll";
 
 const ScrollButton = ({ onClick }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const threshold = 500;
-
-      setIsVisible(scrollTop > threshold);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const isVisible = useScroll();
 
   return (
     <div

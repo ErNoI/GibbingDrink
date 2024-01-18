@@ -27,8 +27,8 @@
 
 .close:hover,
 .close:focus {
-  font-size: 30px;
   text-decoration: none;
+  color: #e7524c;
   cursor: pointer;
 }
 

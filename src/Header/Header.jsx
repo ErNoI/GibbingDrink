@@ -7,11 +7,10 @@ function Header() {
   const handleLearnMoreClick = () => {
     const listElements = document.getElementsByClassName("content");
 
-    // Check if there's at least one element with the specified class
     if (listElements.length > 0) {
       const firstElement = listElements[0];
       const yOffset = firstElement.offsetTop;
-      window.scrollTo({ top: yOffset, behavior: "smooth" });
+      window.scrollTo({ top: yOffset - 100, behavior: "smooth" });
     }
   };
 

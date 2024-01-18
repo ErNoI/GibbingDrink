@@ -9,7 +9,7 @@ body {
 }
 
 .content {
-  margin-top: 50px;
+  margin: 50px 0px;
 }
 
 .list {
@@ -27,7 +27,7 @@ body {
   display: flex;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1695px) {
   .list {
     justify-content: center;
   }

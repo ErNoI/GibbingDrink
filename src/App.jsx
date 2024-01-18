@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./Header/Header";
 import List from "./List";
 import Filter from "./Filter";
+import Rank from "./Rank/Rank";
 import { useState } from "react";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <div className="content">
           <Filter onChange={setFilter} />
           <List filter={filter} />
+          <Rank />
         </div>
       </div>
     </div>

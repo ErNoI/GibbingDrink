@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./quiz.css";
-import { getNumberOfDrinks, getEnergyDrinkById } from "../dataHandler";
+import {
+  getNumberOfDrinks,
+  getEnergyDrinkById,
+  getEnergyDrinkByIdWithBlacklist,
+} from "../dataHandler";
 import ScrollButton from "../buttons/ScrollButton";
 import { FaRegCircleCheck, FaRegCircleXmark } from "react-icons/fa6";
 import Card from "../Card/Card";
@@ -13,7 +17,7 @@ function Quiz() {
   const [counter, setCounter] = useState(0);
 
   const startQuiz = () => {
-    console.log("start quiz");
+    document.documentElement.style.overflowY = "hidden";
     const randomQuestion = getEnergyDrinkById(getRandomId());
     setActiveQuestion(randomQuestion);
     setIsQuizStarted(true);
@@ -30,24 +34,46 @@ function Quiz() {
       setScore((prevScore) => prevScore + 10);
     }
     setCounter((prevCounter) => prevCounter + 1);
-    setUsedIds((prevUsedIds) => [...prevUsedIds, activeQuestion.id]);
     generateNewQuestion();
   }
 
   const closeQuiz = () => {
+    updateRank();
     setUsedIds([]);
     setCounter(0);
     setScore(0);
     setIsQuizStarted(false);
+    document.documentElement.style.overflowY = "";
   };
 
+  function updateRank() {
+    const rank = localStorage.getItem("rank");
+    rank === rank || 0;
+    let mmr = score / 4;
+    if (score < 50) mmr = mmr * -1;
+    const newRank = Number(rank) + mmr;
+    localStorage.setItem("rank", newRank);
+    localStorage.getItem("highScore") < score &&
+      localStorage.setItem("highScore", score);
+
+    window.dispatchEvent(new Event("storage"));
+  }
+
   function generateNewQuestion() {
-    setActiveQuestion(getEnergyDrinkById(getRandomId()));
+    while (true) {
+      let randomId = getRandomId();
+      const test = getEnergyDrinkByIdWithBlacklist(randomId, usedIds);
+      if (test) {
+        setUsedIds((prevUsedIds) => [...prevUsedIds, test.id]);
+        setActiveQuestion(test);
+        break;
+      }
+    }
   }
 
   function getRandomId() {
     const numberOfDrinks = getNumberOfDrinks();
-    const randomId = Math.floor(Math.random() * (numberOfDrinks - 1) + 1);
+    const randomId = Math.floor(Math.random() * numberOfDrinks + 1);
     return randomId;
   }
 
