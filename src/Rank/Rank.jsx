@@ -6,7 +6,7 @@ import greenBadge from "../assets/Ranks/GreenBadge.png";
 import redBadge from "../assets/Ranks/RedBadge.png";
 import rainbowBadge from "../assets/Ranks/RainbowBadge.png";
 import purpleBadge from "../assets/Ranks/PurpleBadge.png";
-import useScroll from "../hooks/useScroll";
+import useScroll from "../Hooks/useScroll";
 
 const RANKTITLE = {
   100: "NEWB",
