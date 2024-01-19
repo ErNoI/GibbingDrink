@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import "./buttons.css";
 import useScroll from "../hooks/useScroll";
 
@@ -10,7 +9,7 @@ const ScrollButton = ({ onClick }) => {
       className={`scroll-button button ${isVisible ? "visible" : ""}`}
       onClick={onClick}
     >
-      Start quiz
+      Rank Up
     </div>
   );
 };
